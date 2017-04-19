@@ -2,7 +2,7 @@ FROM atlassian/default-image
 MAINTAINER Adnene KHALFA<adnene.khalfa@gmail.com>
 
 # Install dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y zip\
     --no-install-recommends
 
 WORKDIR /opt
