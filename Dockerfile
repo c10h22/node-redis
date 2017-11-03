@@ -15,9 +15,9 @@ COPY redis.conf /opt/redis-stable
 COPY start.sh /sbin/start.sh
 RUN chmod 755 /sbin/start.sh
 
-#update nodejs to v5.4.0
+#update nodejs to v8.7.0
 ENV NVM_DIR=/root/.nvm
-RUN . "$NVM_DIR/nvm.sh" && nvm install 5.4.0
+RUN . "$NVM_DIR/nvm.sh" && nvm install 8.7.0 && nvm install 5.4.0
 
 # Define default command
 ENTRYPOINT /sbin/start.sh && /bin/bash
